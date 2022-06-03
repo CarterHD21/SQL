@@ -1,0 +1,22 @@
+/* What does the app's SQL look like? */
+CREATE TABLE Health (id INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT, Date TEXT, maxHeartRate INTEGER, BloodOxygen INTEGER, Steps INTEGER);
+
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (1, "Kaleigh", "05-29-2022", 131, 96, 2644);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (2, "Matt", "05-29-2022", 149, 94, 934);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (3, "Kevin", "05-29-2022", 119, 96, 898);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (4, "Kadence", "05-29-2022", 129, 94, 3032);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (5, "Breonnah", "05-29-2022", 131, 93, 5294);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (6, "Eric", "05-29-2022", 139, 92, 6171);
+INSERT INTO Health (id, Name, Date, maxHeartRate, BloodOxygen, Steps) VALUES (7, "Hannah", "05-29-2022", 147, 96, 10242);
+
+SELECT * FROM Health;
+
+UPDATE Health SET Name = "Gunner" WHERE Name = "Kadence";
+
+SELECT * FROM Health;
+
+DELETE FROM Health WHERE Name LIKE "%Kevin%";
+SELECT * FROM Health;
+
+DELETE FROM Health WHERE Steps < 5000;
+SELECT * FROM Health;
